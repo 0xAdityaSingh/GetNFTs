@@ -11,3 +11,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.content-container {
+  padding: 10%;
+  height: 100vh;
+  background-color: lightgrey;
+  font-size: 64px;
+}
+.columnContainer {
+  display: flex;
+  height: 100%;
+
+}
+
+.dropdown{
+  padding: 10px 0px 10px 0px;
+}
+.rowC{display:flex;}
+.lpanel{min-width: 500px;}
