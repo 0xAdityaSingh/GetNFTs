@@ -57,16 +57,16 @@ const GetNFTs=(props)=>{
     const apiDescription= <>
     <p>NFT API gets all NFTs from the current user or address. Supports both ERC721 and ERC1155. Returns an object with the number of NFT objects and the array of NFT objects.</p>
     <p style={{margin:"10px 0px"}}><span style={{fontWeight:600}}>Address (required)</span>: A user address (i.e. 0x69023dddab45f345f2b683c180001d017fc0a540).</p>
-    <p style={{margin:"10px 0px"}}><a href="https://opensea.io/assets/0xb7f7f6c52f2e2fdb1963eab30438024864c313f6/239" target="_blank">Example NFT Url</a></p>
+    
 </>;
     const handleSubmit = async (event) => {
         event.preventDefault();
         const data = new FormData(event.currentTarget);
         const options={chain:selectedOption['value'],address:data.get('myaddress'),format:selectedOption2['value'],limit:data.get('limit')};
         console.log('option', options);
-        const allnftdata = await Moralis.Web3API.account.getNFTs(options);
-        const nftdata=allnftdata['result'];
-        props.setNFTData({nftdata,allnftdata});
+        const nftdata = await Moralis.Web3API.account.getNFTs(options);
+        const allnfts=nftdata.result;
+        props.setNFTData({nftdata});
 
       };
     return(

@@ -16,7 +16,7 @@ const MyJson=(props)=>{
             flexDirection: 'column',
             // alignItems: 'center',
           }}
-        >{props.mynftdata.nftdata && <ReactJson src={props.mynftdata.nftdata} theme="monokai" />}</Box>
+        >{props.mynftdata.nftdata && <ReactJson src={props.mynftdata.nftdata} theme="tomorrow" />}</Box>
         </div>
     )
 }

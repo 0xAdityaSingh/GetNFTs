@@ -26,5 +26,11 @@ code {
 .dropdown{
   padding: 10px 0px 10px 0px;
 }
-.rowC{display:flex;}
-.lpanel{min-width: 500px;}
+/* .rowC{display:flex;} */
+/* .lpanel{
+  min-width: 500px;
+} */
+.rpanel{
+  flex: auto;
+  max-height: 100px;
+}
